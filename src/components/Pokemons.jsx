@@ -1,5 +1,7 @@
 import Pokemon from "./Pokemon"
 
+import './Pokemons.css'
+
 function Pokemons({ pokemons }) {
 	return (
 		<div className="pokemons">
