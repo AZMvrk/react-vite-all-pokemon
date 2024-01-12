@@ -8,25 +8,30 @@ import CardContent from '@mui/material/CardContent'
 function Pokemon({ pokemon }) {
 	const [pokeData, setPokeData] = useState(null)
 
-	useEffect(() => console.log(pokeData), [pokeData])
-
 	useEffect(() => {
 		fetch(pokemon.url)
 			.then(res => res.json())
 			.then(data => setPokeData(data))
 	}, [pokemon.url])
 
-	console.log("loading component")
 	return (
 		<Card 
 			className="pokemon"
-			sx={{ width: 200 }}
+			sx={{ 
+				width: 200,
+				minHeight: 400
+			}}
 		>
 			<CardHeader
 				title={pokemon.name}
 			/>
 			{pokeData &&
 				<>
+					<CardContent
+						sx={{ padding: "0 16px 16px 16px" }}
+					>
+						<h2>#{pokeData.id}</h2>
+					</CardContent>
 					<CardMedia
 						component="img"
 						image={pokeData.sprites.front_default}
