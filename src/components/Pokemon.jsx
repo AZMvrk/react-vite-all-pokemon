@@ -38,8 +38,8 @@ function Pokemon({ pokemon }) {
 						alt={pokemon.name}
 					/>
 					<CardContent>
-						<p>weight: {pokeData.weight}kg</p>
-						<p>height: {pokeData.height}cm</p>
+						<p>weight: {pokeData.weight}</p>
+						<p>height: {pokeData.height}</p>
 					</CardContent>
 				</>
 			}
