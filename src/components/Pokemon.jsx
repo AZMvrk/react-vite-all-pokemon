@@ -38,8 +38,10 @@ function Pokemon({ pokemon }) {
 						alt={pokemon.name}
 					/>
 					<CardContent>
-						<p>weight: {pokeData.weight}</p>
-						<p>height: {pokeData.height}</p>
+						<p>HP: {pokeData.stats[0].base_stat}</p>
+						<p>ATk: {pokeData.stats[1].base_stat}</p>
+						<p>DEF: {pokeData.stats[2].base_stat}</p>
+						<p>SPD: {pokeData.stats[5].base_stat}</p>
 					</CardContent>
 				</>
 			}
